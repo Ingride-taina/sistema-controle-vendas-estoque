@@ -1,77 +1,101 @@
-## Requisitos
+# Sistema de Controle de Vendas e Estoque
 
-* Conferir a versão do Node.js 22 ou superior: node -v
-* Conferir se está instalado o npx: npx -v
+Sistema web desenvolvido para auxiliar pequenos comércios no controle de estoque e no registro de vendas, substituindo anotações manuais por uma solução digital simples e intuitiva.
 
-## Como rodar o projeto baixado
+> **Status:** Em desenvolvimento
 
-Baixar os arquivos do GitHub.
+## Objetivo
+
+O projeto tem como objetivo facilitar o gerenciamento de um pequeno comércio por meio de uma aplicação web que permita o cadastro de produtos, controle de estoque e registro de vendas, centralizando informações que antes eram armazenadas manualmente.
+
+Além de resolver um problema real, este projeto também faz parte do meu processo de aprendizado em desenvolvimento Full Stack, com foco na construção do back-end e integração com banco de dados.
+
+---
+
+## Funcionalidades
+
+### Implementadas
+
+- Cadastro de produtos
+- Listagem de produtos
+- Pesquisa de produtos
+- Controle de estoque
+- Registro de vendas
+
+### Em desenvolvimento
+
+- Integração com banco de dados
+- Desenvolvimento do back-end
+- Persistência de dados utilizando Prisma
+- Dashboard de vendas
+- Relatórios
+
+---
+
+## Tecnologias
+
+### Front-end
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+### Back-end
+
+- Next.js (API Routes)
+- Prisma ORM *(em desenvolvimento)*
+
+### Banco de Dados
+
+- PostgreSQL *(em desenvolvimento)*
+
+---
+
+## Arquitetura do Projeto
+
+O projeto segue uma arquitetura em camadas para facilitar a manutenção e organização do código.
+
 ```
-git clone <repositorio_url> .
-```
-```
-git clone https://github.com/celkecursos/lista-aula-curso-react19-typescript.git .
+src/
+├── components/
+├── services/
+├── interfaces/
+├── utils/
+└── ...
 ```
 
-Instalar todas as dependências indicadas pelo package.json.
+
+## Como executar o projeto
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/SEU-USUARIO/sistema-controle-vendas-estoque.git
 ```
+
+Entre na pasta:
+
+```bash
+cd sistema-controle-vendas-estoque
+```
+
+Instale as dependências:
+
+```bash
 npm install
 ```
 
-Rodar o projeto React.
-```
+Execute o projeto:
+
+```bash
 npm run dev
 ```
 
-Acessar no navegador a URL.
+A aplicação estará disponível em:
+
 ```
 http://localhost:3000
 ```
 
-## Sequencia para criar o projeto
-
-Criar o projeto com React e Next.js. O ponto "." indica que deve ser criado no próprio diretório. 
-```
-npx create-next-app@latest .
-```
-
-Rodar o projeto React.
-```
-npm run dev
-```
-
-Acessar no navegador a URL.
-```
-http://localhost:3000
-```
-## Como enviar o projeto para o git hub
-inicializar o novo repositório git 
-```
-git init
-```
-adicionar todos os arquivos modificados ao staging area - area de preparação
-```
-git add .
-```
-commit que representa um conjunto de alterações
-```
-git commit -m "base do projeto"
-```
-verificar em qual branch esta
-```
-git branch
-```
-renomear a branch atual do git para main
-```
-git branch -m main
-```
-conectar ao repositório remoto
-```
-git remote add origin https://github.com/
-```
-
-enviar os commits locais para o remoto
-```
-git push -u origin main
-```
-
+Projeto desenvolvido para estudo de desenvolvimento Full Stack e aplicação de conceitos de Engenharia de Software.
