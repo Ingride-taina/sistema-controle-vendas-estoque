@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { BackgroundContainer } from '@/src/components/layout/BackgroundContainer';
 import { HeaderVoltar } from '@/src/components/layout/HeaderVoltar';
 import { BotaoAcaoRapida } from '@/src/components/ui/BotaoAcaoRapida';
@@ -9,22 +9,16 @@ import { CardProdutoModerno } from '@/src/components/produto/CardProdutoModerno'
 import { produtoService, Produto } from '@/src/service/localStorageService';
 
 export default function CadastroProdutoPage() {
-  const [produtos, setProdutos] = useState<Produto[]>([]);
+  const [produtos, setProdutos] = useState<Produto[]>(() => produtoService.getAll());
   const [mostrarForm, setMostrarForm] = useState(false);
   const [produtoEditando, setProdutoEditando] = useState<string | null>(null);
-
-  // Carregar produtos do localStorage ao iniciar
-  //useEffect serve para 
-  useEffect(() => {
-    setProdutos(produtoService.getAll());
-  }, []);
 
   // Adicionar novo produto
   const handleAdicionarProduto = (data: { nome: string; categoria: string; preco: string; quantidade: string }) => {
     const precoNumerico = parseFloat(data.preco.replace(',', '.'));
     const quantidadeNumerica = parseInt(data.quantidade) || 0;
     
-    const novoProduto = produtoService.add({
+    produtoService.add({
       nome: data.nome,
       categoria: data.categoria,
       preco: isNaN(precoNumerico) ? 0 : precoNumerico,
@@ -93,7 +87,7 @@ export default function CadastroProdutoPage() {
                 Nenhum produto cadastrado
               </p>
               <p className="text-sm text-gray-400 mt-1">
-                Clique em "Novo Produto" para adicionar
+                Clique em &quot;Novo Produto&quot; para adicionar
               </p>
             </div>
           ) : (
