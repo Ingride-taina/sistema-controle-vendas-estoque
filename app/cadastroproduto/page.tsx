@@ -13,7 +13,7 @@ export default function CadastroProdutoPage() {
   const [mostrarForm, setMostrarForm] = useState(false);
   const [produtoEditando, setProdutoEditando] = useState<string | null>(null);
 
-  // Adicionar novo produto
+  
   const handleAdicionarProduto = (data: { nome: string; categoria: string; preco: string; quantidade: string }) => {
     const precoNumerico = parseFloat(data.preco.replace(',', '.'));
     const quantidadeNumerica = parseInt(data.quantidade) || 0;
@@ -29,7 +29,7 @@ export default function CadastroProdutoPage() {
     setMostrarForm(false);
   };
 
-  // Editar produto
+ 
   const handleEditarProduto = (id: string) => {
     const produto = produtos.find(p => p.id === id);
     if (produto) {
@@ -38,7 +38,7 @@ export default function CadastroProdutoPage() {
     }
   };
 
-  // Excluir produto
+
   const handleExcluirProduto = (id: string) => {
     if (confirm('Tem certeza que deseja excluir este produto?')) {
       produtoService.delete(id);

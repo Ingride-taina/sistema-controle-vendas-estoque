@@ -19,7 +19,7 @@ export function BackgroundContainer({ children, className = '' }: BackgroundCont
         backgroundColor: '#F8FAFC', // fallback
       }}
     >
-      {/* Overlay com efeito de vidro */}
+   
       <div className="flex-1 min-h-screen backdrop-blur-[2px]">
         {children}
       </div>

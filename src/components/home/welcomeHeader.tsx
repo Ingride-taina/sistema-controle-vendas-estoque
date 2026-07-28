@@ -1,4 +1,4 @@
-import { Bakbak_One, Be_Vietnam_Pro } from "@/app/node_modules/next/font/google";
+import { Bakbak_One, Be_Vietnam_Pro } from "next/font/google";
 
 const bakbak = Bakbak_One({
   subsets: ["latin"],

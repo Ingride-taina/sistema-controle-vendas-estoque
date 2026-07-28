@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -26,13 +27,12 @@ export default function VendasPage() {
     setProdutos(produtoService.getAll());
   }, []);
 
-  // Buscar produtos
   const produtosFiltrados = produtos.filter(p =>
     p.nome.toLowerCase().includes(busca.toLowerCase()) ||
     p.categoria.toLowerCase().includes(busca.toLowerCase())
   );
 
-  // Adicionar ao carrinho
+  
   const adicionarAoCarrinho = (produto: Produto) => {
     if (produto.quantidade <= 0) {
       alert('Produto sem estoque!');
@@ -56,12 +56,12 @@ export default function VendasPage() {
     });
   };
 
-  // Remover do carrinho
+
   const removerDoCarrinho = (id: string) => {
     setCarrinho(prev => prev.filter(item => item.produto.id !== id));
   };
 
-  // Atualizar quantidade no carrinho
+
   const atualizarQuantidade = (id: string, novaQuantidade: number) => {
     if (novaQuantidade <= 0) {
       removerDoCarrinho(id);
@@ -83,13 +83,13 @@ export default function VendasPage() {
     );
   };
 
-  // Calcular total
+ 
   const total = carrinho.reduce(
     (acc, item) => acc + item.produto.preco * item.quantidade,
     0
   );
 
-  // Finalizar venda
+ 
   const finalizarVenda = () => {
     if (carrinho.length === 0) {
       alert('Adicione produtos ao carrinho!');
@@ -116,7 +116,7 @@ export default function VendasPage() {
     setProdutos(produtoService.getAll());
     setHistorico(vendaService.getRecentes());
     setCarrinho([]);
-    alert('Venda realizada com sucesso! 🎉');
+    alert('Venda realizada com sucesso!');
   };
 
   return (
@@ -125,12 +125,12 @@ export default function VendasPage() {
         
         <HeaderVoltar titulo="Realizar Venda" showBack={true} />
 
-        {/* Busca */}
+      
         <div className="px-6 mt-4">
           <BuscarProduto value={busca} onChange={setBusca} />
         </div>
 
-        {/* Lista de Produtos */}
+        
         <div className="px-6 mt-4">
           <ListaProdutosVenda
             produtos={produtosFiltrados}
@@ -138,7 +138,7 @@ export default function VendasPage() {
           />
         </div>
 
-        {/* Carrinho */}
+      
         <div className="px-6 mt-6">
           <CarrinhoCompras
             itens={carrinho}
@@ -149,7 +149,7 @@ export default function VendasPage() {
           />
         </div>
 
-        {/* Botão Histórico */}
+    
         <div className="px-6 mt-4">
           <BotaoAcaoRapida
             icone=""
@@ -160,7 +160,6 @@ export default function VendasPage() {
           />
         </div>
 
-        {/* Histórico */}
         {mostrarHistorico && (
           <div className="px-6 mt-4">
             <HistoricoVendas vendas={historico} />

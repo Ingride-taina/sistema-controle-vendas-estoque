@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -76,7 +77,7 @@ export function FormProdutoSimples({
       </h3>
 
       <div className="space-y-4">
-        {/* Nome do Produto */}
+      
         <div>
           <label className={`${beVietnam.className} text-sm font-medium text-gray-700 block mb-1`}>
             Nome do produto
@@ -92,7 +93,7 @@ export function FormProdutoSimples({
           />
         </div>
 
-        {/* Categoria */}
+       
         <div>
           <label className={`${beVietnam.className} text-sm font-medium text-gray-700 block mb-1`}>
             Categoria
@@ -108,7 +109,7 @@ export function FormProdutoSimples({
           />
         </div>
 
-        {/* Preço */}
+       
         <div>
           <label className={`${beVietnam.className} text-sm font-medium text-gray-700 block mb-1`}>
             Preço
@@ -126,7 +127,6 @@ export function FormProdutoSimples({
           </div>
         </div>
 
-        {/* NOVO: Quantidade em Estoque */}
         <div>
           <label className={`${beVietnam.className} text-sm font-medium text-gray-700 block mb-1`}>
             Quantidade em Estoque
@@ -143,7 +143,7 @@ export function FormProdutoSimples({
           />
         </div>
 
-        {/* Botões */}
+  
         <div className="flex gap-3 pt-2">
           <button
             type="submit"

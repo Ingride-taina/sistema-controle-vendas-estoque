@@ -2,13 +2,13 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1a1a1a; /* Texto escuro no fundo claro para dar leitura */
+  --foreground: #1a1a1a; 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #121212; /* Fundo escuro real */
-    --foreground: #ededed; /* Texto claro no fundo escuro */
+    --background: #121212; 
+    --foreground: #ededed; 
   }
 }
 

@@ -31,8 +31,8 @@ export function CategoriaTabs({
             transition-all duration-200 ease-in-out
             ${beVietnam.className} text-sm font-medium
             ${categoria === categoriaAtiva
-              ? 'bg-[#2563EB] text-white shadow-lg shadow-[#2563EB]/30' // Usando sua cor primária
-              : 'bg-white/80 backdrop-blur-sm text-[#475569] hover:bg-white/90' // Usando text-secondary
+              ? 'bg-[#2563EB] text-white shadow-lg shadow-[#2563EB]/30' 
+              : 'bg-white/80 backdrop-blur-sm text-[#475569] hover:bg-white/90'
             }
             hover:scale-[1.02] active:scale-[0.98]
           `}

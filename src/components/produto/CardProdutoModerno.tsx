@@ -46,7 +46,7 @@ export function CardProdutoModerno({
         </span>
       </div>
 
-      {/* NOVO: Quantidade em Estoque */}
+      
       <div className="mt-2 flex items-center gap-2">
         <span className="text-sm text-white">📦 Estoque:</span>
         <span className={`

@@ -24,7 +24,7 @@ export function BotaoAcaoRapida({
   tamanho = 'md',
   className = ''
 }: BotaoAcaoRapidaProps) {
-  // Cores baseadas na sua paleta
+ 
   const cores = {
     blue: {
       bg: 'bg-[#2563EB]',
@@ -58,7 +58,6 @@ export function BotaoAcaoRapida({
     }
   };
 
-  // Tamanhos
   const tamanhos = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',

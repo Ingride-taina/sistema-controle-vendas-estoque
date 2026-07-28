@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { Bakbak_One, Be_Vietnam_Pro } from "next/font/google";
@@ -30,7 +31,7 @@ function Menu() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* HEADER */}
+     
       <div className="px-6 pt-30 md:pt-32 md:max-w-3xl md:mx-auto w-full">
         <h1 className={`${bakbak.className} text-white text-2xl`}>
           Bem Vindo (A)!
@@ -40,11 +41,10 @@ function Menu() {
         </h2>
       </div>
 
-      {/* ÁREA DE AÇÕES - Botões Módulos */}
       <div className="flex-1 flex items-center justify-center px-6 pb-20">
         <div className="w-full max-w-md space-y-4">
           
-          {/* Botão - Cadastrar Produtos */}
+          
           <BotaoModulo
             titulo="CADASTRAR PRODUTOS"
             subtitulo="Gerencie seu estoque"
@@ -53,7 +53,7 @@ function Menu() {
             cor="blue"
           />
 
-          {/* Botão - Realizar Venda */}
+        
           <BotaoModulo
             titulo="REALIZAR VENDA"
             subtitulo="Inicie uma nova venda"
@@ -62,7 +62,7 @@ function Menu() {
             cor="green"
           />
 
-          {/* Menu Inferior*/}
+         
           <BotoesNavegacao />
           
         </div>
